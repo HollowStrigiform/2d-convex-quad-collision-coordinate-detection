@@ -8,6 +8,7 @@ download appropriate software (I used eclipse IDE to perform the tasks)
 or manually compile with "javac Detection.java" then "java Detection" in command terminal
 
 Sources used:
+
 https://stackoverflow.com/questions/753140/how-do-i-determine-if-two-convex-polygons-intersect (used a simpler version comparison)
 https://stackoverflow.com/questions/335600/collision-detection-between-two-images-in-java (later rejected as dealing with coordinates)
 https://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect (part of comparison algorithm)
@@ -37,4 +38,5 @@ Ex. (1, 1), (3, 4), (3, 1), and (1, 4) must be ordered ()
 2. Double check if compiler is on correct filepath (path and folder options on default settings)
 
 ------------------------------------Unlisted issues or questions----------------------------------------------
+
 Send me a message or text me at 309-660-0309
