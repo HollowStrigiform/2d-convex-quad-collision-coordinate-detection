@@ -28,7 +28,7 @@ Ex.
 "1 2 3 4 5 6 7 8" is a quadrilateral with the coordinates (1,2), (3,4), (5,6), (7,8) on the plane
 
 2. Check if the coordinates are listed in order clockwise or counterclockwise from the first point
-Ex. (1, 1), (3, 4), (3, 1), and (1, 4) must be ordered ()
+Ex. (1, 1), (3, 4), (3, 1), and (1, 4) should be ordered (1, 4), (3, 4), (3, 1), (1, 1) or in outermost order.
 
 3. Please enter integer numbers only (This is given the Exam criteria of integer rows)
 
