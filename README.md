@@ -1,5 +1,5 @@
 # 2d-convex-quad-collision-coordinate-detection
-Tests collision or overlap of quadrilaterals by coordinate points
+Purpose: tests collision or overlap of quadrilaterals by coordinate points.
 
 Hello, please compile the "Detection.java" file or run in an appropriate IDE.
 To install java:
@@ -37,4 +37,4 @@ Ex. (1, 1), (3, 4), (3, 1), and (1, 4) must be ordered ()
 2. Double check if compiler is on correct filepath (path and folder options on default settings)
 
 ------------------------------------Unlisted issues or questions----------------------------------------------
-Send me a message or text me at 309-660-0309
+                    Send me a message or text me at 309-660-0309
