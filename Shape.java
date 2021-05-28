@@ -5,18 +5,21 @@
 public class Shape
 {
 	private LineSeg line1, line2, line3, line4; //Lines that make up the quadrilateral
-	private LineSeg comparator = new LineSeg();
+	private LineSeg comparator = new LineSeg(); //Linesegment class to use enclosed "comparePoints" method
 	private Point p1, p2, p3, p4; //Points that form the quadrilateral
 	
-	public Shape()
+	public Shape() //Default constructor
 	{}
 	
 	public Shape(int[] coord) //Creates line segments given coordinates
 	{
+		//Four points making a quadrilateral
 		p1 = new Point(coord[0], coord[1]);
 		p2 = new Point(coord[2], coord[3]);
 		p3 = new Point(coord[4], coord[5]);
 		p4 = new Point(coord[6], coord[7]);
+		
+		//Four quadrilateral lines for comparison
 		line1 = new LineSeg(p1.giveX(), p1.giveY(), p2.giveX(), p2.giveY());
 		line2 = new LineSeg(p2.giveX(), p2.giveY(), p3.giveX(), p3.giveY());
 		line3 = new LineSeg(p3.giveX(), p3.giveY(), p4.giveX(), p4.giveY());
@@ -26,14 +29,16 @@ public class Shape
 	{
 		if(compareFromLine(s1.getLine1(), s2) == 0 || compareFromLine(s1.getLine2(), s2) == 0 || compareFromLine(s1.getLine3(), s2) == 0 ||  compareFromLine(s1.getLine4(), s2) == 0)
 		{
-			return 0;
+			return 0; //If there's one intersection, returns that the shapes collide
 		}
 		else if(compareFromLine(s1.getLine1(), s2) == 1 || compareFromLine(s1.getLine2(), s2) == 1 || compareFromLine(s1.getLine3(), s2) == 1 ||  compareFromLine(s1.getLine4(), s2) == 1)
 		{
-			return 1;
+			return 1; //If there's one touching point, returns that the shapes coincide
 		}
-		return compareFromLine(s1.getLine1(), s2);
+		return compareFromLine(s1.getLine1(), s2); //Shapes are apart
 	}
+	
+	//Returns four connected lines forming a quadrilateral.
 	public LineSeg getLine1()
 	{
 		return line1;
@@ -51,7 +56,7 @@ public class Shape
 		return line4;
 	}
 	
-	public int compareFromLine(LineSeg l, Shape s) //compares a single line to lines from another shape
+	private int compareFromLine(LineSeg l, Shape s) //compares a single line to lines from another shape
 	{
 		if (comparator.comparePoints(l, s.getLine1()) == 0 || comparator.comparePoints(l, s.getLine2()) == 0 || comparator.comparePoints(l, s.getLine3()) == 0 || comparator.comparePoints(l, s.getLine4()) == 0) //If one line intersects, the quadrilateral itself will collide
 		{
@@ -61,7 +66,7 @@ public class Shape
 		{
 			return 1;
 		}
-		else //No intercept or touching points
+		else //No intercepting or touching points
 		{
 			return 2;
 		}
