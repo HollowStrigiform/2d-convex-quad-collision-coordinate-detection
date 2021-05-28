@@ -3,7 +3,6 @@
  * is more rigorous in its OOP capabilities and simpler to
  * go through.
  * Author: Owen S.
- * 
  */
 import java.util.*;
 public class Detection {
@@ -16,21 +15,20 @@ public class Detection {
 		Scanner s = new Scanner(System.in);
 		System.out.print("Please Refer to \"readme.txt\" for input format\nEnter X Y Coordinates of First Convex Quadrilateral in Connected Order Separated by Spaces: ");
 		String[] input = s.nextLine().split(" "); //Cleans the inputted data for later grouping
-		int [] coord1 = new int[8];
-		for(int i = 0; i < coord1.length; i++)
+		int [] coord = new int[8]; //coordinates and parameter for shape creating
+		for(int i = 0; i < coord.length; i++) //Iterates through array to copy input
 		{
-			coord1[i] = Integer.parseInt(input[i]);
+			coord[i] = Integer.parseInt(input[i]); //Stores input in coordinate array
 		}
-		shape1 = new Shape(coord1);
+		shape1 = new Shape(coord); //First shape
 		System.out.print("Enter X Y Coordinates of Second Convex Quadrilateral in Connected Order Separated by Spaces: ");
 		input = s.nextLine().split(" ");
-		int [] coord2 = new int[8];
 		for(int i = 0; i < coord1.length; i++)
 		{
-			coord2[i] = Integer.parseInt(input[i]);
+			coord[i] = Integer.parseInt(input[i]);
 		}
-		shape2 = new Shape(coord2);
-		switch(shapeComp.compareShapes(shape1, shape2))
+		shape2 = new Shape(coord); //Second shape for comparison created
+		switch(shapeComp.compareShapes(shape1, shape2)) //Uses switch sequence to determine result of three cases
 		{
 			case 0:
 				System.out.println("Collided");
@@ -42,7 +40,7 @@ public class Detection {
 				System.out.println("Apart");
 				break;
 		}
-		s.nextLine();
+		s.nextLine(); //Pause for viewing before closing program
 	}
 
 }
