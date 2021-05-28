@@ -2,7 +2,7 @@
  * Note: I've decided to use Java to do this program as it
  * is more rigorous in its OOP capabilities and simpler to
  * go through.
- * Author: Owen S.
+ * @author Owen S.
  */
 import java.util.*;
 public class Detection {
