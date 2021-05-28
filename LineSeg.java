@@ -1,21 +1,13 @@
-
 public class LineSeg
 {
-	Point p1, p2;
-	double dist;
+	Point p1, p2; //two points to make a line.
 	
 	public LineSeg()
 	{}
-	public LineSeg(int x1, int y1, int x2, int y2) //Constructs a vector given 2 points
+	public LineSeg(int x1, int y1, int x2, int y2) //Constructs a line segment given two points (4 coordinates)
 	{
 		p1 = new Point(x1, y1);
 		p2 = new Point(x2, y2);
-		dist = setDistance(x1, y1, x2, y2);
-	}
-	
-	public double setDistance(int x1, int y1, int x2, int y2)
-	{
-		return Math.sqrt(Math.pow((x2-x1), 2) + Math.pow((y2-y1), 2));
 	}
 	
 	public int comparePoints(LineSeg l1, LineSeg l2) //Compares two points for intersection or collinearity
